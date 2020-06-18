@@ -6,13 +6,13 @@ import api from './services/api'
 import './App.css';
 
 function App() {
-    const [projects, setProjetcs] = useState([]);
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         api.get('projects').then(res => (
-            setProjetcs(res.data)
+            setProjects(res.data)
         ))
-    }, [])
+    }, []);
 
     async function handleAddProject() {
         const response = await api.post('projects', {
@@ -20,7 +20,7 @@ function App() {
             "owner": "Ítalo Botelho"
         })
 
-        setProjetcs([ ...projects, response.data ]);
+        setProjects([ ...projects, response.data ]);
     };
 
     return (
