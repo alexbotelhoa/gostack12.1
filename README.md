@@ -1,2 +1,2 @@
-# gostack12
- Bootcamp Gostack 12.0
+# Bootcamp Gostack 12.2
+ Bootcamp Gostack 12.2
